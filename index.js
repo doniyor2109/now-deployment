@@ -148,8 +148,10 @@ async function findPreviousComment(text) {
     commit_sha: context.sha
   });
 
-  console.info("comments", comments);
-  console.info("searching comment", text);
+  core.info("comments"); 
+  core.info(comments);
+  core.info("searching comment");
+  core.info(text);
 
   const zeitPreviewURLComment = comments.find(comment =>
     comment.body.startsWith(text)
